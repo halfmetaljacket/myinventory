@@ -2,8 +2,7 @@
 Information will be added here later
 """
 
-from netdevice import NetDevice, DeviceConnectionError
-from netmiko import NetmikoAuthError
+from netdevice import NetDevice, DeviceConnectionError, DeviceAuthenticationError
 import devicelib
 
-__all__ = (devicelib, DeviceConnectionError, NetDevice, NetmikoAuthError)
+__all__ = (devicelib, DeviceConnectionError, NetDevice, DeviceAuthenticationError)

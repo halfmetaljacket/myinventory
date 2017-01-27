@@ -1,0 +1,6 @@
+name:               example device type 1
+group type:         hardware
+config variables:   []
+config lines:
+    - to be added later
+    - line 2

@@ -67,7 +67,7 @@ class NetDevice(object):
     This class can be loaded for inventory mgmt and device CLI access, using the Netmiko library
     """
     def __init__(self, name, hostname='', ip='', site='', roles=None, user='', device_type='cisco_ios_ssh',
-                 global_delay_factor=1, conn=None):
+                 global_delay_factor=1, conn=None, member_of=None, config_vars=None, config_cache=None):
         """NetDevice is used when initializing a device from an inventory file, and is used for device CLI
         access via SSH, using the Netmiko library.
 
@@ -135,10 +135,12 @@ class NetDevice(object):
         self.log_file_path = None
         self.conn = conn
         self.debug = False
-        self.config_cache = None
         self.password = self.secret = None
         self._miko_dict = {}
         self._fh = self._sh = None
+        self.config_cache = config_cache
+        self.config_vars = config_vars
+        self.member_of = member_of
 
     def _build_miko_dict(self, user=None, passwd=None, secret=None):
         self._miko_dict['device_type'] = self.device_type

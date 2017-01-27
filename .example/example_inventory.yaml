@@ -1,0 +1,39 @@
+__version__:    0.1
+
+devices:
+    example_device_1:
+        member of:
+            - example site 1
+            - example device type 1
+            - example role access
+        config variables:
+            - user_vlan:    316
+            - voice_vlan:   318
+            - ip_address:   1.1.1.1
+        config lines:
+            - to be added later
+            - line 2
+    example_device_2:
+        member of:
+            - example site 2
+            - example device type 2
+            - example role datacenter
+        config variables:
+            - ip_address:   1.1.1.2
+            - user_vlan:    \d+
+        config lines:
+            - to be added later
+            - line 2
+groups:
+    example site 1:
+        group file: sites\example site 1.yaml
+    example site 2:
+        group file: sites\example site 2.yaml
+    example device type 1:
+        group file: hardware\example device type 1.yaml
+    example device type 2:
+        group file: hardware\example device type 2.yaml
+    example role access:
+        group file: roles\example role access.yaml
+    example role datacenter:
+        group file: roles\example role datacenter.yaml

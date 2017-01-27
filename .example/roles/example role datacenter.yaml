@@ -1,0 +1,6 @@
+name:               example role datacenter
+group type:         role
+config variables:   []
+config lines:
+    - to be added later
+    - line 2

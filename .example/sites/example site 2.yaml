@@ -1,0 +1,11 @@
+name:               example site 2
+group type:         site
+config variables:
+    - dns_server_1: 1.2.3.10
+    - dns_server_2: 1.1.3.10
+    - core_switch_ip:   1.2.255.1
+    - site_code:    EXAMPLESITE1
+    - mgmt_default_gw:  1.2.250.1
+config lines:
+    - to be added later
+    - line 2

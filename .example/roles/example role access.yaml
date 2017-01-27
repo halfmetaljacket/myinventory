@@ -1,0 +1,9 @@
+name:               example role access
+group type:         role
+vars:
+    routing protocol:   default_gw
+    mgmt interface:     vlan950
+config variables:   []
+config lines:
+    - to be added later
+    - line 2
