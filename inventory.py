@@ -2,7 +2,15 @@
 import yaml
 import json
 # TODO: yaml supersets json, so adjust to always yaml.load() instead of deciding
-
+"""
+Notes: ansible is top-down (groups define their hosts). I want to be the other way around.
+The critical aspect of this is that almost all work is done on the host,
+but that means that the host needs to get all group data any time it looks for something.
+Need to figure out how to implement var_cache for this. Or do I?
+Need to seriously consider to permanantly specialize group types (site/role/etc) and if so, how to handle var collision when multiple parents of the same type are selected
+Need to figure out the best method for handling when a device or group comfig changes.
+Need to figure out how to dump inventory files after changes are made.
+"""
 
 class Inventory(object):
     def __init__(self, inventory_file, file_type='yaml'):
@@ -57,6 +65,3 @@ class Group(object):
         self.my_devices = {}
         self.devices_cache = {}
         self.child_groups = {}
-
-
-
